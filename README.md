@@ -38,7 +38,6 @@ Registeration Number : 212222040181
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -50,7 +49,6 @@ Registeration Number : 212222040181
 ## MYLIST.XML
 ```
 <?xml version="1.0" encoding="utf-8"?>
-
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
 android:id="@+id/textView"
 android:layout_width="wrap_content"
@@ -90,7 +88,6 @@ android:textColor="#4d4d4d"
 ## MAINACTIVITY.JAVA
 ```
 package com.example.ex_7;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,9 +96,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import android.os.Bundle;
-
 public class MainActivity extends AppCompatActivity {
     ListView listView;
     TextView textView;
@@ -116,20 +111,16 @@ public class MainActivity extends AppCompatActivity {
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, listItem);
         listView.setAdapter(adapter);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // TODO Auto-generated method stub
                 String value=adapter.getItem(position);
                 Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
-
             }
         });
-
     }
 }
-
 ```
 ## OUTPUT
 
